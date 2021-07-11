@@ -1,0 +1,13 @@
+### Steps to install httpd
+---
+- name: run install command with yum if centos
+  yum:
+    name: httpd
+    state: latest
+  when: ansible_facts['distribution'] | lower == "centos"
+
+- name: run install command with yum if centos
+  apt:
+    name: apache2
+    state: latest
+  when: ansible_facts['distribution'] | lower == "ubuntu"

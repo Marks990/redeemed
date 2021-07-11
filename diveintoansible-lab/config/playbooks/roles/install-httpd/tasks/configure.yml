@@ -1,0 +1,13 @@
+- name: Copy httpd config
+  src: files/httpd.conf
+  dest: /etc/httpd/conf
+    owner: root
+    group: root
+    chmod: 0755
+
+- name: Copy index.html /var/www/html config
+  src: files/httpd.conf
+  dest: /var/www/html
+    owner: root
+    group: root
+    chmod: 0755
