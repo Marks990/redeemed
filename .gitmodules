@@ -1,0 +1,3 @@
+[submodule "mark-app/themes/ananke"]
+	path = mark-app/themes/ananke
+	url = https://github.com/budparr/gohugo-theme-ananke.git
