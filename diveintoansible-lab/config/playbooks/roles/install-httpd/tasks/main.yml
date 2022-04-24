@@ -1,6 +1,0 @@
----
-# tasks file for install-httpd
-- name: Install httpd
-  include_tasks: install_httpd.yml
-  include_tasks: configure.yml
-  include_tasks: service.yml

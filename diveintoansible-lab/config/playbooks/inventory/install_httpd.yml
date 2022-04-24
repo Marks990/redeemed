@@ -1,5 +1,0 @@
----
-- hosts: centos2
-  remote_user: root
-  roles:
-    - install-httpd

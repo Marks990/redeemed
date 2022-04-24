@@ -1,9 +1,0 @@
----
-all:
-  children:
-    redhat:
-      hosts:
-        centos[1:3]:
-    ubuntu:
-      hosts:
-        ubuntu[1:3]:
