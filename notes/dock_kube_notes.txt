@@ -1,0 +1,49 @@
+Docker image terraform setup
+docker run -v $PWD/docker_test:/home/docker_test -p 8080:80 -it ubuntu:latest /bin/bash
+apt-get update && apt-get install -y gnupg software-properties-common curl
+apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+if error with pub key run this - apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <key shown in error>
+apt-get update && apt-get install terraform
+
+
+kubectl run neo4j --image=neo4j --port=7474  --dry-run=client -o yaml 
+kubectl expose pods neo4j --port=7474 --target-port='http'  --type='NodePort' --target-port=30003 --dry-run=client -o yaml
+
+
+kubectl config set-context --current --namespace=<insert-namespace-name-here>
+# Validate it
+kubectl config view --minify | grep namespace
+
+kubectl port-forward neo4j 30120:7474
+kubectl get pod neo4j --template='{{(index (index .spec.containers 0).ports 0).containerPort}}{{"\n"}}'
+
+##########
+Install git lab
+###########
+sudo docker run --detach \
+  --hostname gitlab.example.com \
+  --publish 443:443 --publish 80:80 --publish 22:22 \
+  --name gitlab \
+  --restart always \
+  --volume trial:/config:/etc/gitlab \
+  --volume trial:/logs:/var/log/gitlab \
+  --volume trial:/data:/var/opt/gitlab \
+  --shm-size 256m \
+  gitlab/gitlab-ee:latest
+  
+  
+#######################
+Docker modify created volume
+##############################
+VOL_NAME=temp_vol
+docker volume create $VOL_NAME
+docker run -v $VOL_NAME:/root --name helper busybox true
+mkdir tmp
+docker cp tmp helper:/root/dir0
+docker cp tmp helper:/root/dir1
+docker cp tmp helper:/root/dir2
+rm -rf tmp
+docker rm helper
+# check volume
+sudo ls /var/lib/docker/volumes/$VOL_NAME/_data
+dir0 dir1 dir2
