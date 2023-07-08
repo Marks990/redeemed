@@ -4,4 +4,5 @@ Basic building application. This is the start of making apss and containerizing 
 ```bash
 cd basicapp
 docker compose -f app.yaml up # Bring up
-docker compose -f app.yaml down # Bring down```
+docker compose -f app.yaml down # Bring down
+```
