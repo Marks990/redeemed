@@ -1,0 +1,5 @@
+services:
+  marky:
+    build: .
+    ports:
+      - "8126:8000"
