@@ -1,7 +1,11 @@
 # Build app into a docker image.
 FROM python:3-slim
 
-RUN pip install django
+WORKDIR /tools/requirements.txt
+
+COPY $PWD/requirements.txt requirements.txt
+
+RUN pip install -r requirements.txt
 
 COPY $PWD/mak /apps/mak
 
