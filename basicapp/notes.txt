@@ -1,6 +1,6 @@
 # Cheat sheet
 # Start application
- docker compose --file app.yaml up --rmi all
+ docker compose --file app.yaml up
 
 # Stop application
 docker compose --file app.yaml down --rmi all

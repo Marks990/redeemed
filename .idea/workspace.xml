@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cd30421-0d33-412b-84b9-92a833e0e31f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/basicapp/notes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basicapp/mak/blog/templates/blog/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basicapp/mak/blog/templates/blog/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basicapp/mak/blog/templates/blog/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basicapp/mak/blog/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basicapp/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/basicapp/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basicapp/mak/mak/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/basicapp/mak/mak/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basicapp/mak/mak/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/basicapp/mak/mak/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basicapp/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/basicapp/notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,13 +31,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Virtual\redeemed\basicapp" />
@@ -148,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688776622250</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Application updates">
+      <created>1689541701826</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689541701826</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,6 +178,7 @@
     <MESSAGE value="Starting with the basics." />
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Add the app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add the app" />
+    <MESSAGE value="Application updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Application updates" />
   </component>
 </project>
