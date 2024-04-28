@@ -1,0 +1,26 @@
+# docker compose up -d
+# docker compose down --rmi all
+# MSYS_NO_PATHCONV=1 docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
+
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:16.9.6-ce.0
+    container_name: gitlab
+    restart: always
+#    hostname: 'mark.example.com'
+    env_file:
+      - path: ./default.env
+        required: true # default
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        # Add any other gitlab.rb configuration here, each on its own line
+        # external_url 'https://mark.example.com'
+    ports:
+      - '80:80'
+      - '443:443'
+      - '22:22'
+    volumes:
+      - '$GITLAB_HOME/config:/etc/gitlab'
+      - '$GITLAB_HOME/logs:/var/log/gitlab'
+      - '$GITLAB_HOME/data:/var/opt/gitlab'
+    shm_size: '256m'
