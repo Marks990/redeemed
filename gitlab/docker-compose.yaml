@@ -7,14 +7,19 @@ services:
     image: gitlab/gitlab-ce:16.9.6-ce.0
     container_name: gitlab
     restart: always
-#    hostname: 'mark.example.com'
+    hostname: '192.168.1.83'
+#    deploy:
+#      resources:
+#        limits:
+#          cpus: '1'
+#          memory: 4GB
     env_file:
       - path: ./default.env
         required: true # default
     environment:
       GITLAB_OMNIBUS_CONFIG: |
         # Add any other gitlab.rb configuration here, each on its own line
-        # external_url 'https://mark.example.com'
+        external_url 'http://192.168.1.83:80'
     ports:
       - '80:80'
       - '443:443'
