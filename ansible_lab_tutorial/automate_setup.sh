@@ -3,9 +3,9 @@ sudo apt update;
 
 sudo apt install sshpass;
 
-mkdir ~/.ssh;
+# mkdir ~/.ssh;
 
-cd ~/.ssh;
+# cd ~/.ssh;
 
 ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa <<<y 2>&1 >/dev/null;
 
