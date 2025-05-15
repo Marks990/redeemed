@@ -10,5 +10,3 @@ ansible all -m file -a 'path=/tmp/test_modules.txt state=touch mode=0600'
 
 ## Copy file from remote and store locally
 ansible all -m fetch -a 'src=/tmp/test_modules.txt dest=/tmp/'
-
-# SAmple Header
