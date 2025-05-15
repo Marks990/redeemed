@@ -1,10 +1,10 @@
 # scripts
 These are testing scripts for automation
  
- [[TOC]]
+ [[_TOC_]]
 
 # Ansible modules 
-[List all modules](https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.)html
+[List all modules](https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html)
 Quick viewing ansible-doc <module>
 
 ## Create a file on the remote server
