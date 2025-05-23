@@ -1,11 +1,14 @@
-# docker compose up 
+# docker compose up --build
 # docker compose down --rmi all
 services:
   app:
     # image: python:3-slim
+    container_name: django
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - ./:/app
     command: "sleep 1000000000"
     ports: 
     - 8000:8000
