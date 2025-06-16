@@ -1,0 +1,15 @@
+# docker compose up --build
+# docker compose down --rmi all
+services:
+  terra:
+    image: final:1234
+    container_name: terra
+    build:
+      context: .
+      args:
+        PRODUCT: terraform
+        VERSION: 1.12.1
+    volumes: 
+        - ./:/app
+    privileged: true
+    entrypoint: ["sleep", "1000000"]
